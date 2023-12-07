@@ -4,6 +4,7 @@ project(imgui_2d_draw)
 
 option(BUILD_TESTS "Build app with unit tests" ON)
 
+add_subdirectory(third_party/googletest)
 
 add_subdirectory(app)
 
