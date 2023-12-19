@@ -5,7 +5,7 @@
 
 ### TODO:
 
-- [ ] Add thirt_party for reflection
+- [ ] Add third_party for reflection
 - [ ] Create data storage
 - [ ] Write unit tests
 - [ ] Make command service (Undo Redo)
