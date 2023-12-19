@@ -9,5 +9,6 @@ option(BUILD_TESTS "Build app with unit tests" ON)
 add_subdirectory(src)
 
 if (${BUILD_TESTS})
+    add_subdirectory(third_party/googletest)
     add_subdirectory(tests)
 endif()
