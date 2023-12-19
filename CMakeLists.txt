@@ -2,11 +2,11 @@ cmake_minimum_required(VERSION 3.15)
 
 project(imgui_2d_draw)
 
+set(CMAKE_CXX_STANDARD 17)
+
 option(BUILD_TESTS "Build app with unit tests" ON)
 
-add_subdirectory(third_party/googletest)
-
-add_subdirectory(app)
+add_subdirectory(src)
 
 if (${BUILD_TESTS})
     add_subdirectory(tests)
