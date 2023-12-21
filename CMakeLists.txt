@@ -21,10 +21,6 @@ set(USE_PCH OFF CACHE BOOL "" FORCE)
 set(CUSTOM_DOXYGEN_STYLE OFF CACHE BOOL "" FORCE)
 set(BUILD_WEBSITE_DOCU OFF CACHE BOOL "" FORCE)
 
-if (MSVC)
-    set(BUILD_WEBSITE_DOCU ON CACHE BOOL "" FORCE)
-endif()
-
 add_subdirectory(third_party/rttr)
 
 add_subdirectory(src)
