@@ -12,6 +12,17 @@ option(LEVELDB_INSTALL "Install LevelDB's header and library" OFF)
 
 add_subdirectory(third_party/leveldb)
 
+set(BUILD_UNIT_TESTS OFF CACHE BOOL "" FORCE)
+set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(BUILD_DOCUMENTATION OFF CACHE BOOL "" FORCE)
+set(BUILD_INSTALLER OFF CACHE BOOL "" FORCE)
+set(BUILD_PACKAGE OFF CACHE BOOL "" FORCE)
+set(USE_PCH OFF CACHE BOOL "" FORCE)
+set(CUSTOM_DOXYGEN_STYLE OFF CACHE BOOL "" FORCE)
+set(BUILD_WEBSITE_DOCU OFF CACHE BOOL "" FORCE)
+
+add_subdirectory(third_party/rttr)
+
 add_subdirectory(src)
 
 if (${BUILD_TESTS})

@@ -16,6 +16,7 @@ target_link_libraries(${TEST_NAME}
     PUBLIC
     gtest
     leveldb
+    RTTR::Core
 )
 
 include(GoogleTest)
