@@ -12,12 +12,21 @@ add_executable(${TEST_NAME}
     ${TESTS}
 )
 
-target_link_libraries(${TEST_NAME} 
-    PUBLIC
-    gtest
-    leveldb
-    RTTR::Core
-)
+if (MSVC)
+    target_link_libraries(${TEST_NAME} 
+        PUBLIC
+        gtest
+        leveldb
+        RTTR::Core_Lib
+    )
+else ()
+    target_link_libraries(${TEST_NAME} 
+        PUBLIC
+        gtest
+        leveldb
+        RTTR::Core
+    )
+endif ()
 
 include(GoogleTest)
 gtest_discover_tests(${TEST_NAME})
