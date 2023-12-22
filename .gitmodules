@@ -9,3 +9,7 @@
 	path = third_party/rttr
 	url = git@github.com:EvgeniNF/rttr.git
 	branch = master
+[submodule "third_party/imgui"]
+	path = third_party/imgui
+	url = git@github.com:ocornut/imgui.git
+	branch = docking
