@@ -4,6 +4,9 @@ set(IMGUI_DIR ${PROJECT_SOURCE_DIR}/third_party/imgui)
 
 message("-- Build ImGui")
 
+find_package(glfw3 REQUIRED)
+find_package(OpenGL REQUIRED)
+
 include_directories(${IMGUI_DIR})
 
 set(HDRS
@@ -37,3 +40,17 @@ target_include_directories(
     ${IMGUI_DIR}
     ${PROJECT_SOURCE_DIR}/src
 )
+
+if (MSVC)
+    target_link_libraries(
+        ImGui 
+        PRIVATE 
+        glfw 
+        opengl32.lib)
+else()
+	target_link_libraries(
+        ImGui 
+        PRIVATE 
+        glfw 
+        OpenGL)
+endif()
